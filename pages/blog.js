@@ -18,7 +18,7 @@ function Blog({ entradas }) {
 }
 
 export async function getStaticProps() {
-  const url = `${process.env.API_URL}/blogs`;
+  const url = `${process.env.API_URL}/blogs?_sort=created_at:desc`;
   const respuesta = await fetch(url);
   const entradas = await respuesta.json();
   return {

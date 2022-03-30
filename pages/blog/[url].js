@@ -6,7 +6,7 @@ import styles from "../../styles/Entrada.module.css";
 function EntradaBlog({ entrada }) {
   const { titulo, contenido, published_at, imagen } = entrada;
   return (
-    <Layout pagina="blog">
+    <Layout pagina={titulo}>
       <main className="contenedor">
         <h1 className="heading">{titulo}</h1>
         <article className={styles.entrada}>

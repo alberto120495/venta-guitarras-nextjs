@@ -39,3 +39,13 @@
   background-color: var(--primary);
   color: var(--blanco);
 }
+
+.entrada {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.texto {
+  white-space: pre-wrap;
+  text-align: justify;
+}

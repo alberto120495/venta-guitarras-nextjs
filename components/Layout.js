@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
 
-function Layout({ children, pagina }) {
+function Layout({ children, pagina, guitarra }) {
   return (
     <div>
       <Head>
@@ -12,11 +12,14 @@ function Layout({ children, pagina }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossoOrigin />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" />
       </Head>
-      <Header />
+      <Header guitarra={guitarra} />
       {children}
       <Footer />
     </div>
   );
 }
+Layout.defaultProps = {
+  guitarra: null,
+};
 
 export default Layout;

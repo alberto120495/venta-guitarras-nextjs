@@ -1,13 +1,11 @@
 import Curso from "../components/Curso";
 import Layout from "../components/Layout";
 import Listado from "../components/Listado";
-import Entrada from "../components/Entrada";
-import styles from "../styles/Entrada.module.css";
 import ListadoBlog from "../components/ListadoBlog";
 
 export default function Home({ guitarras, curso, entradas }) {
   return (
-    <Layout pagina="Inicio" guitarra={guitarras[3]}>
+    <Layout pagina="Inicio" guitarra={guitarras[3]} >
       <main className="contenedor">
         <h1 className="heading">Nuestra Coleccion</h1>
         <Listado guitarras={guitarras} />

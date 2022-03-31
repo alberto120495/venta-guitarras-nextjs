@@ -1,9 +1,17 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
-import { useRouter } from "next/router";
 
 function Header({ guitarra }) {
+  const [numArticulos, setNumArticulos] = useState([]);
+
+  useEffect(() => {
+    const numArt = JSON.parse(localStorage.getItem("carrito")) ?? [];
+    setNumArticulos(numArt.length);
+  }, []);
+
   const router = useRouter();
   return (
     <header className={styles.header}>
@@ -25,6 +33,18 @@ function Header({ guitarra }) {
             <Link href="/nosotros">Nosotros</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/tienda">Tienda</Link>
+            <Link href="/carrito">
+              <a className={styles.carrito}>
+                <Image
+                  layout="fixed"
+                  width={30}
+                  height={25}
+                  src="/img/carrito.png"
+                  alt="Carrito"
+                />
+                <p className={styles.articulos}>{numArticulos}</p>
+              </a>
+            </Link>
           </nav>
         </div>
         {guitarra && (

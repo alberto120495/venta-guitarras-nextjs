@@ -27,6 +27,7 @@
 .navegacion {
   margin-top: 5rem;
   display: flex;
+  align-items: center;
   gap: 2rem;
   position: relative;
   z-index: 1;
@@ -117,6 +118,20 @@
     animation-delay: 0s;
     animation-timing-function: ease-in-out;
   }
+}
+
+.carrito {
+  position: relative;
+}
+
+.articulos {
+  position: absolute;
+  top: -23px;
+  right: 0;
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 20px;
+  text-align: center;
 }
 
 @keyframes mostrarImagen {

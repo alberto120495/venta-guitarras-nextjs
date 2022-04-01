@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import ListadoBlog from "../components/ListadoBlog";
-import styles from "../styles/Blog.module.css";
 function Blog({ entradas }) {
   return (
     <Layout pagina="Blog">

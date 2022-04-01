@@ -1,0 +1,16 @@
+.curso {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .curso {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .curso {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
